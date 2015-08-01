@@ -7,6 +7,7 @@
 ###Bower install 
     npm install jquery.cookieCnil
     
+
 ###pour initialiser cookieCnil.js :
 
     $('body').cookieCnil();
