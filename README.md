@@ -1,17 +1,19 @@
-Jquery.cookieCnil.js
+#Jquery.cookieCnil.js
 
-Télécharger le script et insérer le entre les balises <body> :
+##Télécharger le script et insérer le entre les balises <body> :
 
     <script type="text/javascript" src="js/jquery.cookieCnil.js"></script>
 
-pour initialiser cookieCnil.js :
+##pour initialiser cookieCnil.js :
+
     $('body').cookieCnil();
 
-Paramètres:
+##Paramètres:
+
     $('body').cookieCnil({
-        "chemin": '/', //Chemin ou sera placer le cookie (mettre '/' pour tout le site)
-        "url": "http://www.cnil.fr/vos-obligations/sites-web-cookies-et-autres-traceurs/que-dit-la-loi/", //Url du bouton en savoir plus
-        "enSavoirPlus": true, //Presence ou non du bouton en savoir plus
+        "chemin": '/', //Chemin ou sera placé le cookie (mettre '/' pour tout le site)
+        "url": "http://www.cnil.fr/vos-obligations/sites-web-cookies-et-autres-traceurs/que-dit-la-loi/", //Url du bouton 'En savoir plus'
+        "enSavoirPlus": true, //Presence ou non du bouton 'En savoir plus'
         "couleurBandeau": '#232323',
         "couleurTexte": '#FFF',
         "couleurTexteBtn": '#000',
@@ -19,10 +21,11 @@ Paramètres:
         "texte": "En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies permettant d'am&eacute;liorer votre exp&eacute;rience utilisateur."
     });
 
-Chaque option est facultative évidemment
+##Chaque option est facultative évidemment
 
 
-Penser à lancer l'initialisation dans une fonction :
+##Penser à lancer l'initialisation dans une fonction :
+
     $(document).ready(function () {
         $('body').cookieCnil();
     });

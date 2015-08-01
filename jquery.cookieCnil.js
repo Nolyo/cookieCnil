@@ -12,6 +12,7 @@
         {
             "chemin": '/',
             "url": "http://www.cnil.fr/vos-obligations/sites-web-cookies-et-autres-traceurs/que-dit-la-loi/",
+            "enSavoirPlus": true,
             "couleurBandeau": '#232323',
             "couleurTexte": '#FFF',
             "couleurTexteBtn": '#000',
@@ -73,40 +74,15 @@
                 });
             }
         }
-
-        function getParam() {
-
-            var src = $('#mentionLegale').attr('src');
-
-            if (src.match(/cookieCnil\.js(\?.*)?$/) != null) {
-
-                var splitURL = src.split('?');
-
-                var params = splitURL[1].split('&');
-
-                var myParams = new Object();
-
-                var keyValue = new Array();
-
-                for (var j = 0; j < params.length; j++) {
-
-                    keyValue = params[j].split('=');
-
-                    myParams[keyValue[0]] = unescape(keyValue[1]);
-
-                }
-                return myParams;
-            }
-        }
-
-        //var queryParams = getParam();
-
         /* Creation du bandeau, init css*/
 
         if (!readCookie('accept_cookies')) {
             this.append("<div style='display:none' class='cookie_accept'><div class='text_cookie'>" + defauts.texte + "</div></div>");
-            $('.cookie_accept').append('<div class="btn_cookie"><a href="#" class="button_cook" id="btn_close_cookies">Fermer</a> <a class="button_cook" href="' + defauts.url + '" id="btn_more_cookies">En savoir plus +</a></div>');
-            //$('.cookie_accept').append('<div class="btn_cookie"><a href="#" class="button_cook" id="btn_close_cookies">Fermer</a></div>');
+            if (defauts.enSavoirPlus){
+                $('.cookie_accept').append('<div class="btn_cookie"><a href="#" class="button_cook" id="btn_close_cookies">Fermer</a> <a class="button_cook" href="' + defauts.url + '" id="btn_more_cookies">En savoir plus +</a></div>');
+            }else{
+                $('.cookie_accept').append('<div class="btn_cookie"><a href="#" class="button_cook" id="btn_close_cookies">Fermer</a></div>');
+            }
             setTimeout(function () {
                 $('.cookie_accept').css({
                     'min-height': '33px',
@@ -122,9 +98,7 @@
                     'font-family': 'arial',
                     'text-align': 'center'
                 });
-                $('.text_cookie').css({
-                    'margin': 'auto'
-                });
+                $('.text_cookie').css('margin', 'auto');
                 $('.btn_cookie').css({
                     'margin-top': '5px',
                     'text-align': 'center'
