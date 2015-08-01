@@ -1,14 +1,14 @@
-#Jquery.cookieCnil.js
+##Jquery.cookieCnil.js
 
-##Télécharger le script et insérer le entre les balises <body> :
+###Télécharger le script et insérer le entre les balises `<body>` :
 
     <script type="text/javascript" src="js/jquery.cookieCnil.js"></script>
 
-##pour initialiser cookieCnil.js :
+###pour initialiser cookieCnil.js :
 
     $('body').cookieCnil();
 
-##Paramètres:
+###Paramètres:
 
     $('body').cookieCnil({
         "chemin": '/', //Chemin ou sera placé le cookie (mettre '/' pour tout le site)
@@ -21,10 +21,10 @@
         "texte": "En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies permettant d'am&eacute;liorer votre exp&eacute;rience utilisateur."
     });
 
-##Chaque option est facultative évidemment
+###Chaque option est facultative évidemment
 
 
-##Penser à lancer l'initialisation dans une fonction :
+###Penser à lancer l'initialisation dans une fonction :
 
     $(document).ready(function () {
         $('body').cookieCnil();
