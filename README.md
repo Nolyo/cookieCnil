@@ -5,7 +5,7 @@
     <script type="text/javascript" src="js/jquery.cookieCnil.js"></script>
         
 ###Bower install 
-    npm install jquery.cookieCnil
+    bower install jquery.cookieCnil
     
 
 ###pour initialiser cookieCnil.js :
